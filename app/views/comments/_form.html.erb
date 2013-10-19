@@ -1,0 +1,6 @@
+<%= form_for [@blog,@comment], :method => :post do |c| %>
+
+<%= c.label :comment_box %>
+<%= c.text_field :comment_box %>
+<%= c.submit %>
+<% end %>

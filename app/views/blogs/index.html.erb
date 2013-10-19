@@ -1,0 +1,15 @@
+<p> <%= link_to("Create New Blog" , :controller => 'blogs' , :action => 'new') %> <br/> </p>
+
+<%= @blogs.each do |s| %>
+
+<p> Auther : <%= s.user.name if current_user %> <br/> </p>
+<p> Title : <%= s.title %> <br/> </p>
+
+
+<p> Content : <%= s.content %> <br/> </p>
+
+<%= link_to "show", blog_path(s) %>
+
+<%#= link_to("Show" , :controller => 'blogs' , :action => 'show' , :id => s.id ) %>  </br>
+
+<% end %>

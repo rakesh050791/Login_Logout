@@ -1,6 +1,16 @@
 LoginApp::Application.routes.draw do
-  resources :users 
+  resources :users do 
+    resources :profiles
+  end
+    
+   
+                   
   resources :sessions 
+  
+  resources :blogs do
+    resources :comments
+  end
+  
 
    # The priority is based upon order of creation:
   # first created -> highest priority.

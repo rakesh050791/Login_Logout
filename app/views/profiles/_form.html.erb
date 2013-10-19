@@ -1,0 +1,46 @@
+<%= form_for [@user,@profile], :url =>{:controller => "profiles",:action => "update" ,:id => @profile.id}  do |f| %>
+
+
+ <p>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br /> 
+  </p>
+
+  <p>
+  <%= f.label :age %>:
+  <%= f.text_field :age%><br /> 
+  </p>
+
+  <p>
+  <%= f.label :gender %>:
+  <%= f.text_field :gender %><br />
+  </p>
+
+  <p>
+  <%= f.label :email %>:
+  <%= f.text_field :email %><br />
+  </p>
+  
+  <p>
+  <%= f.label :mobile_no %>:
+  <%= f.text_field :mobile_no %><br />
+  </p> 
+
+   <p>
+  <%= f.label :designation %>:
+  <%= f.text_field :designation %><br />
+  </p> 
+
+  <p>
+  <%= f.label :country %>:
+  <%= f.text_field :country %><br />
+  </p>
+
+  <p>
+  <%= f.label :description %>:
+  <%= f.text_field :description %><br />
+  </p>
+  
+  <%= f.submit %>
+
+ <% end %>

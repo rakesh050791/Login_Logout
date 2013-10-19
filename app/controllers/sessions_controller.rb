@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
           @user = User.authenticate(params[:email],params[:password])
           if @user
           	session[:user_id] = @user.id
-               msg = "user signed up"
+               msg1=@user.name
+               msg = "Welcome  "+msg1+" You Have LoggedIn Successfully"
           else
                msg = "user not signed up"
           end

@@ -10,6 +10,17 @@
 
 <%= alert  %>
 <%= notice  %>
+<% if session[:user_id].nil? %>
+	 <%= link_to "Login", new_session_path %> </br> 
+	
+<% else %>
+	<%= link_to "My Blogs", blogs_path %> ||
+	<%= link_to "Edit Profile", edit_user_profile_path(current_user,current_user.profile) %> ||
+	<%= link_to "View Profile", user_profile_path(current_user,current_user.profile) %> ||
+	<%#= link_to "See Comment", _path %>
+
+	<%= link_to "Logout", "/sessions/#{session[:user_id]}", :method => :delete %> <br/>  <p>  </p>
+<% end %>
 
 <%= yield %>
 

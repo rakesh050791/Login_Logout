@@ -1,0 +1,10 @@
+Title : <%= @blog.title %> <br/>
+
+content : <%= @blog.content %> <br/>
+
+<% @blog.comments.each do |c| %>
+	<b><%= c.user.name %></b> commented <b> <%= c.comment_box %></b>
+<% end %> 
+
+
+<%= link_to "Add comment", new_blog_comment_path(@blog) %>
